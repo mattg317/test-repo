@@ -5,7 +5,7 @@ file = 'nyc.geojson'
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
     data = json.load(open('data/nyc.geojson'))
     return data
